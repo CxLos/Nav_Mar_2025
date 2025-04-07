@@ -517,7 +517,7 @@ age_pie = px.pie(
 
 # ------------------------------- Insurance Status ------------------------- #
 
-print("Insurance Unique", df["Individual's Insurance Status:"].unique().tolist())
+# print("Insurance Unique:", df["Individual's Insurance Status:"].unique().tolist())
 
 insurance_unique = [
     'Unknown', 
@@ -621,9 +621,9 @@ insurance_pie=px.pie(
 # ------------------------------ Location Encountered --------------------------------- #
 
 # Unique Values:
-print(df['Location Encountered:'].unique().tolist())
+# print("Locations Unique:", df['Location Encountered:'].unique().tolist())
 
-Locations = ['GudLife', 
+locations_unique = ['GudLife', 
              "Black Men's Health Clinic", 
              'Downtown Austin Community Court', 
              'Cross Creek Hospital', 
@@ -1086,7 +1086,8 @@ zip_fig =px.bar(
     xaxis_title='Residents',
     yaxis_title='Zip Code',
     title_x=0.5,
-    height=1100,
+    height=950,
+    width=1500,
     font=dict(
         family='Calibri',
         size=17,
@@ -1722,7 +1723,7 @@ html.Div(
     className='row4',
     children=[
         html.Div(
-            className='graph0',
+            className='graph5',
             children=[
                 dcc.Graph(
                     figure=zip_fig
@@ -1737,7 +1738,7 @@ html.Div(
     className='row3',
     children=[
         html.Div(
-            className='graph5',
+            className='graph6',
             children=[
                 html.H1(
                     'Number of Visitors by Zip Code', 
